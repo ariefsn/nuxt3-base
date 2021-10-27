@@ -1,10 +1,11 @@
-import { IStore } from "~~/models"
+import { IStore } from "@/models"
 import { counter } from "./counter"
 import { person } from "./person"
+import { useState } from '#app'
 
-const state = () => <IStore>{
-  counter: counter().value,
-  person: person().value
+const store = () => <IStore>{
+  counter: counter(),
+  person: person()
 }
 
-export default state
+export default store

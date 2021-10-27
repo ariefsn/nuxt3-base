@@ -1,6 +1,4 @@
-export interface Ref<T> {
-  value: T
-}
+import type { Ref } from '@vue/reactivity'
 
 export interface IStoreCounter {
   value: number
@@ -12,6 +10,6 @@ export interface IStorePerson {
 }
 
 export interface IStore {
-  counter: IStoreCounter
-  person: IStorePerson
+  counter: Ref<IStoreCounter>
+  person: Ref<IStorePerson>
 }

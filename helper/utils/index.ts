@@ -1,5 +1,5 @@
 import { ConfigType } from 'dayjs'
-// import { DatetimeDiff } from './datetime'
+import { DatetimeDiff } from './datetime'
 import { IMatchString } from './strings'
 
 export interface IMethods {
@@ -9,8 +9,9 @@ export interface IMethods {
   randomNumberBetween: (min: number, max: number) => number
   formatNumber: (amount: number, decimalCount?: number, thousands?: string, decimal?: string) => string
   normalize: (value: number, min: number, max: number, minList: number, maxList: number) => number
+  formatDate: (date: ConfigType, format?: string, locale?: string) => string
   dateRange: (start: ConfigType, end: ConfigType, format: string) => string[]
-  // duration: (start: ConfigType, end: ConfigType, output: DatetimeDiff, float?: boolean) => number
+  duration: (start: ConfigType, end: ConfigType, output: DatetimeDiff, float?: boolean) => number
   capitalize: (str: string) => string
   randomString: (length?: number) => string
   limitString: (str: string, limit: number) => string
@@ -19,6 +20,6 @@ export interface IMethods {
 }
 
 export * from './others'
-// export * from './datetime'
+export * from './datetime'
 export * from './numbers'
 export * from './strings'

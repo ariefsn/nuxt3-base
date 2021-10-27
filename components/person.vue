@@ -1,12 +1,15 @@
 <template>
   <div>
     <div>Person</div>
-    {{ personState.name }}
+    <div>
+      Name: {{ personState.name }}
+    </div>
+    <div>
+      Age: {{ personState.age }}
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { useNuxtApp } from "#app";
-
 const personState = useNuxtApp().$store.person;
 </script>

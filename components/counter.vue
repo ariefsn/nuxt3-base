@@ -6,9 +6,5 @@
 </template>
 
 <script lang="ts" setup>
-import { useNuxtApp } from "#app";
-
-const store = useNuxtApp().$store;
-
-const counterState = store.counter;
+const counterState = useNuxtApp().$store.counter;
 </script>
